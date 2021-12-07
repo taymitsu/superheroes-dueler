@@ -1,4 +1,5 @@
 import hero
+import random
 
 class Ability:
     def __init__(self, name, max_damage):
