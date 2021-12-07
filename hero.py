@@ -12,6 +12,8 @@ class Hero:
 
         self.abilities = list()
         self.armors = list()
+        self.deaths = 0
+        self.kills = 0 
 
     def fight(self, opponent):
         if len(self.abilities) == 0 and len(opponent.abilities) == 0:
@@ -83,7 +85,15 @@ class Hero:
 
     def add_weapon(self, weapon):
         self.abilities.append(weapon)
-    pass
+    
+    def add_kill(self, num_kills):
+        ''' Update self.kills by num_kills amount'''
+        self.kills += num_kills
+    
+    def add_death(self, num_deaths):
+        ''' Update deaths with num_deaths'''
+        # TODO: This method should add the number of deaths to self.deaths
+        self.death += num_deaths
 
 if __name__ == "__main__":
     hero = Hero("Wonder Woman")
